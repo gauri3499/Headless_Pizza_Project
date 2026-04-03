@@ -1,0 +1,11 @@
+git -- it is a version control system,which helps to save and track the code
+    --it is a software present in our system
+github--it is a cloud plaform to perform git operations
+
+command lines:
+1.git init -- for initialization one time
+2.git add filename/foldername/path.(for all files) ---adding
+3.git commit -m "delivery msg"
+4.git remote add origin githulink ---one time ---providing path
+5.git push origin branchname --pushing code
+6.git status  ---checking status

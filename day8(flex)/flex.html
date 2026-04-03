@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border:1px solid black;
+            height:600px;
+            display: flex;
+            flex-direction: column-reverse;
+            /* gap: 10px; */
+            justify-content: flex-end;/*use this propertices main axis  */
+            align-items: center; /*use the cross axis */
+        }
+        .item{
+            height:100px;
+            width:100px;
+            border:1px soild black;
+            font-size: 50px;
+        }
+        .one{
+            background-color: red;
+        }
+        .two{
+            background-color: blue;
+        }
+        .three{
+            background-color: brown;
+        }
+        .four{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent"> <!-- div is not a block of code it is line by line-->
+        <div class="item one">1</div>
+        <div class="item two"> 2</div>
+        <div class="item three">3</div>
+        <div class="item four">4</div>
+        
+         
+    </div>
+</body>
+</html>
+
+<!-- flex model is a one -dimemnsional layout(row/col)
+ flex container -- parent
+ flex items -- child
+
+ parent --display:flex
+        --default direction:row
+        --change direction :flex-direction
+
+        --main axis : direction of flex items(row/col)---justifly content
+        --cross axis : perpendicular to main          ---align items
+
+ direction : row
+      main axis--x axis
+      cross axis -- y axis
+
+ direction :column
+      main axis -- y axis
+      cross axis -- x axis     
+  -->
+<!-- flex-direction : is write row ,column,row-reverse,col-reverse -->
+<!-- justifly content: center,flex-start,flex-end  -->
+ <!-- align item:center,flex-start,flex-end -->

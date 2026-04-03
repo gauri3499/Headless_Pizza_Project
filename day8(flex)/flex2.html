@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border:1px solid black;
+            height:600px;
+            display: flex;
+            justify-content:space-evenly;
+            flex-wrap: wrap-reverse;
+        }    
+        .item{
+            height:100px;
+            width:100px;
+            border:1px soild black;
+            font-size: 50px;
+        }
+        .one{
+            background-color: red;
+        }
+        .two{
+            background-color: blue;
+        }
+        .three{
+            background-color: brown;
+        }
+        .four{
+            background-color: blueviolet;
+        }
+        #special{
+            background-color: green;
+            flex-shrink: 1;
+            /* flex-grow:2 ; */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent"> <!-- div is not a block of code it is line by line-->
+        <div class="item one">1</div>
+        <div class="item two"> 2</div>
+        <div id="item three">3</div>
+        <div class="item four">4</div>
+        <div class="item three">1</div>
+        <div class="item four">2</div>
+        <div class="item three">3</div>
+        <div class="item four">4</div>
+        
+         
+    </div>
+</body>
+</html>
+
+<!-- justifly content --flex-start
+                      --center
+                       space - around
+                       space - between
+                       space - elevenly-->
+

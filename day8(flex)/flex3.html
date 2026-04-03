@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex example</title>
+    <style>
+        .navbar{
+            display: flex;
+            justify-content: flex-end;
+            height: 80px;
+            background-color:black;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index:1000;
+            box-shadow:0 4px 10px rgba(0,0,0,0.9)
+
+            /* 0 -- right
+               4px --down
+               10px --blur
+               rgba--color */
+        }
+        .navbar a{
+            color: antiquewhite;
+            font-size: 30px;
+            text-decoration: none;
+            margin: 10;
+        }
+        .icon{
+            display: flex;
+            background-color:white;
+            justify-content:column;
+        }
+        a{
+            color:white;
+            font-size: 30px;
+            text-decoration:none;
+            /* padding: 10px 20px; */
+            margin: 10px;
+            margin-top: 10px;
+            background-color:black;
+            
+
+        }
+        .navbar a:hover{
+            text-decoration: underline;
+            color: grey;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: blueviolet;
+        }
+        .image{
+            height: 50px;
+            border-radius: 50px;
+            display: flex;
+           flex-direction: column;
+        }    
+        
+        main{
+            height:80px;
+            border:1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content :center;
+
+
+        }
+        .main a:hover{
+            text-decoration: underline;
+            color:gray;
+        }
+        .main a:link, .main a:visited{
+            color: blue;
+        }
+        .fa-brands{
+            border:1 px solid black;
+            padding: 10px;
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navItem" ><img src=""E:\AI doctor\images.jpg"" alt="butterfly"></div>
+        <div class="navItem"><a href="">Home</a></div>
+        <div class="navItem"><a href="">Register</a></div>
+        <div class="navItem"><a href="">Login</a></div>
+    </div>
+    <div class="main">
+        <a href="" target="_blank"> <i class="fa-brands" fa-facebook></i></a>
+        <i class="fa-brands" fa-instagram></i>
+        <i class="fa-brands" fa-youtube></i>
+    </div>
+</body>
+</html>
