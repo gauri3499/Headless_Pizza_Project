@@ -1,0 +1,252 @@
+javascript :
+        - is a scripting language
+        - used to create dynamic (beghaviour/functionalities) and interactive webpages/application
+        - it is used as client(UI) and server side(Node Js) language
+        - it is a synchrnous language(it excute the code line by line)
+        - it is case sensitive
+
+
+javascript is used in :
+                    - React JS --library
+                    - Node JS -- server
+                    - Angular JS --framework
+
+We can add JS in our webpages:
+                     - 1.inline JS
+                     - 2.internal JS
+                     - 3.Ecternal JS
+
+Tokens:
+       - building blocks of a program
+       1.keywords
+       2.Identifiers
+       3.value/data/literals
+       4.variable
+       5.operators
+       6.Separators
+
+1.keywords:reserved words/pre defined words
+          ex:let,var const,function,if,for,while etc.
+
+2.Identifiers : names providing to the variable,object,function,list etc
+
+Rules:
+     1.names cannot start with number
+     2.names cannot start with special charcter (except _,$)
+     3.dont provide space between names
+     4.keywords are not allowed for names
+     5.should  be short,simple and meaningful
+
+3.value/literals/data:
+      number : 10,-20,46.89
+      string : group of charcters
+             : "xyz",'xyz',`xyz`(back tick/template string -- used for interpolation)
+      boolean : true/false  
+      null
+      undefind
+      array:[10,20,30]
+      object:{
+        "key1"=value1,
+        "key2"=value2
+      }     
+
+      data divide into two types:
+      1.primitive data types -- storing single value
+              number
+              string
+              boolean
+              null
+              undefind
+              symbol
+              bigint
+
+      2.Non- primitive Data Type -- Multiple data
+             - objects
+             - json
+             - array
+             - map
+             - set
+Note: typeof operators helps to know the datatype/literals type
+
+4.variable:it is a container used to store a data /value
+
+declaration of variable:(providing names)
+             - var
+             - let
+             - const
+
+assigning/initalizing the variable:
+            - let a;
+            a=10
+
+re declaring the variable :
+            - let a;
+            - let a;
+
+re-assigning/re-initalizing the variable
+            - let a;
+            a=10;//assigning
+            a='xyz';//re-assigning
+
+hosting the variable :
+            it is a beghaviour where variable and function declaration are moved to top of the scope
+            before declaration
+
+            let a;
+            console.log(a);
+
+            a=10;
+
+-----------------------------------------------------------------------------
+                 var                  let               const
+------------------------------------------------------------------------------------------
+scope            function             block             block
+
+re-declare       yes                   no                no
+
+re-assign        yes                     yes              no
+
+declaring without undefind               undefind         error
+assigning
+(assigning)       optional               optional          mandatory
+
+hosting           yes                       yes             yes
+-----------------------------------------------------------------
+
+operators:
+       - its a symbolused to perform operation on value(operands)
+
+       1.Arithmatic operators:
+                    + , -, *, /, %, **
+
+              Note: + acts like concatination(merging)with string
+                    `${}` acts like concatination---interpolation
+
+              Operator Presedence:
+                             ()
+                             **
+                             * / %
+                             + -             
+
+       2.Assignment operator/compound Assignmentoperator:
+                    = ,+= ,-= ,*= ,/=, &= ,**=
+
+       3.Comparision operator/Relational operator:
+                    < ,> ,<= ,>=,== ,===, !=, !==
+
+       4.logical Operator:
+                    && ,||,!                                       
+       
+       5.conditional operator/Ternary operator:
+                 operand1?operand2:operand3
+
+                 operand1 ---conditional
+                 operand2 ---true
+                 operand3 ---false
+
+       6.Type of operator :
+                 used to know the data type of a literal/value       
+
+        7.unary operator:
+           1.increment unary operator:
+                1.pre-increment :
+                            ++value
+                            frist increase the values ,then use
+                2.post-increment:
+                value++
+                frist it is uses the value,thenincrease
+      2.decrement-unary operator:
+             1.pre-decrement:
+                    --value
+                    frist decrease the values,than use
+              2.post-decrement:
+                    value--
+                   frist it uses the value,then decrease 
+
+=========================================================================================
+Conditional Statements:it is execute 
+         used to make decisions it is used to execute a block of code until the condition satisfies 
+
+         Types:
+              1.if Statements:when condition satisfly block of code will execute
+                   syntax if(condition){
+                        //code
+                   }
+              2.else if Statements :if condition satisfy if block will execute,
+                                    if condition is not satisfy then else block will execute
+
+                                    syntax:if(condition){
+                                          //true
+                                    }
+                                    else{
+                                          //false
+                                    }
+                      note: without if , we cann't use else keywords
+
+
+              3.else if ladder Statements:when we are having Multiplecondition
+
+                     syntax: if(condition1){
+
+                     }else if (condition2){
+
+                     }else if (conditional3){
+
+                     }else if (condition n time ){
+
+                     }else{
+
+                     }
+
+              4.nested if Statements: Conditional statement inside another conditional statement 
+                                     syntax:
+                                     if(conditional){
+                                          if(condition){
+
+                                          }else{
+
+                                          }
+                                     }
+              5.switch Statements :
+                        switch(value/variable/data){
+                              case 1 :break;
+                              case 2:break;
+                              case 3: break;
+                              case n:break;
+                              default:
+
+                        }    
+                  Note : break is a keyword or it acts like a breaking statement,which helps
+                         to break/interupt the program
+
+                         default is a keyword ,if non of the case are not matchinf then
+                         default block will execute
+
+             note : one line of code curly brackets is not needed (optional)
+                    for more than one line {}are mandatory
+================================================================================
+looping statement :
+            it is used to execute a block of code multiple times until the condition satisfies
+
+                    types:
+                    while looping
+                    do-while loop 
+                    for loop
+            while loop                                      dowhile loop
+---------------------------------------------------------------------------------
+syntax      while(condition){                               do{
+
+                         }                                  } while (condition)   
+
+no.of iterations     0                                          1
+                   frist check condition,                     frist executes the code,
+                   then executes the code                      then checks the condition
+
+for loop:
+-----------
+for (declare and intialize;condition;updation){
+
+}
+
+
+

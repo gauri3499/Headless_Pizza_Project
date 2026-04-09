@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Headless Pizza</title>
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="navbar">
+  <h2 class="logo">🍕 Headless Pizza</h2>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search pizza..." onkeyup="searchPizza()">
+  </div>
+</header>
+
+<!-- Pizza Container -->
+<div class="container" id="pizzaList">
+
+  <div class="card">
+    <img src="pizza1.jpg">
+    <h3>BBQ Chicken Pizza</h3>
+    <div class="bottom">
+      <span>⭐ 4.6</span>
+      <span>$16.25</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="pizza2.jpg">
+    <h3>Hawaiian Pizza</h3>
+    <div class="bottom">
+      <span>⭐ 4</span>
+      <span>$14</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="pizza3.jpg">
+    <h3>Vegetarian Pizza</h3>
+    <div class="bottom">
+      <span>⭐ 4.2</span>
+      <span>$13</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="pizza4.jpg">
+    <h3>Pepperoni Pizza</h3>
+    <div class="bottom">
+      <span>⭐ 5</span>
+      <span>$15.75</span>
+    </div>
+  </div>
+<div class="container">
+  <div class="card">
+    <img src="pizza5.jpg">
+    <h3>Margherita Pizza</h3>
+    <div class="bottom">
+      <span>⭐ 4.5</span>
+      <span>$12.5</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="pizza6.jpg">
+    <h3>Onion Pizza</h3>
+    <div class="bottom">
+      <span>⭐ 3.6</span>
+      <span>$15</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="pizza7.jpg">
+    <h3>Garlic Pizza</h3>
+    <div class="bottom">
+      <span>⭐ 4.4</span>
+      <span>$28</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="pizza8.jpg">
+    <h3>Cheesy Pizza</h3>
+    <div class="bottom">
+      <span>⭐ 4.7</span>
+      <span>$25.12</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <img src="pizza9.jpg">
+    <h3>Tomato Pizza</h3>
+    <div class="bottom">
+      <span>⭐ 5</span>
+      <span>$20</span>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<div class="footer"> 
+    <h2 class="logo">🍕 Headless Pizza</h2>
+     <p> Headless Pizza is a demo app to showcase Pizza </p>
+      <p>Menu built using Wix Studio's Headless CMS as </p>
+      <p> the Backend along with React JS as the Frontend. </p> 
+     <!-- Social Icons --> 
+      <div class="icons">
+         <i class="fab fa-instagram"></i>
+         <i class="fab fa-twitter"></i> 
+         <i class="fab fa-youtube"></i>
+          <i class="fab fa-linkedin"></i> 
+          <i class="fab fa-whatsapp"></i> 
+      </div>
+         <!-- Subscribe Section --> 
+          <h1>Subscribe</h1>
+           <div class="subscribe-box">
+             <input type="email" placeholder="johndoe@gmail.com">
+              <button>Subscribe</button> </div>
+               <p class="note"> Subscribe to our newsletter for latest updates, deals and offers related to Headless Pizza right inside your mailbox. </p> 
+               <hr>
+                <p class="copy">© 2024 Headless Pizza Limited</p>
+           </div>
+
+<!-- 🔍 JavaScript Search -->
+<script>
+function searchPizza() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    let title = card.querySelector("h3").textContent.toLowerCase();
+
+    if (title.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

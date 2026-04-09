@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operators in JS</title>
+</head>
+<body>
+    <script>
+        let a=10;
+        let b=20;
+//Ariythmatic operator
+        // console.log(a+b);//addition
+        // console.log(a-b);
+        // console.log(a*b);
+        // console.log(a/b);
+        // console.log(a%b);//reminder
+        // console.log(a**3)// power 10810*10=1000
+
+    //  console.log(10+10);
+    //  console.log(10+"Gauri");//concatations
+    //  console.log("Gauri"+10+10);//gauri1010
+    //  console.log(10+10+"Gauri");//20Gauri  
+     
+    //  let name='radha';
+    //  console.log("Hello",+name)//hello,gauri
+
+    //  console.log(`Hello ${name}`);//hello Gauri backtick used fornconcatation
+     //interpolation of a string usingtemplate string
+
+//Assignment or compound assignment  operator
+
+        // let x=5;//assigning value
+        // console.log(x);
+        //     // x=a+x;
+        //     x+=a;
+        // console.log(x);  
+        // x-=a;
+        // console.log(x)   
+        // x*=a;//x=x*a;
+        // console.log(x) 
+        // x/=a;//x=x/a
+        // console.log(x) 
+        // x%=a;
+        // console.log(x) 
+        // x**=a;
+        // console.log(x) 
+
+//Comparision Operator - it gives only boolean data   
+    //    console.log(a==b);//equalsto 
+    //    console.log(a!=b);
+    //    console.log(a>b); 
+    //    console.log(a<b); 
+    //    console.log(10>=9);//grater than +equal to
+    //    console.log(10<=9);//less than equal to 
+       
+    //    console.log(10=="10");//number==string //true //ignores data type
+    //    console.log(10==="10")//check with datatypes and value
+
+//Logical operator : on boolean and gives boolean
+        //console.log("=== logical and ===")
+        // console.log(true&&true);    //true
+        // console.log(true&&false);//false
+        // console.log(false&&false);//false
+        // console.log(false&&true);//false
+        // console.log(10>20&&20<10); //false
+        
+        // console.log("===logical or ===")
+        // console.log(true||true);//true
+        // console.log(true||false);//true
+        // console.log(false||true);//true
+        // console.log(false||false);//false
+
+        // console.log("===logical not ===")
+        // console.log(!true)//false
+        // console.log(!false)//true
+
+// //Ternary operator/conditional operator
+// let balance=1000;
+// let withdraw=500;  
+
+//          //syntax:
+//          //operand1 ? operand2:operand3//it is called as ternary operator
+//          //(conditional)?true:false
+// let result=(withdraw<=balance)?"you can withdraw":"insufficent balances"
+// console.log(result);
+
+// let age =21;
+// let gender='F';
+// //vote --- gender can be anything
+//           //age 18<=age age>=18
+
+// let result1=(age>=18 &&(gender=='M'||gender=='F'))?" you are eligible ":"you are not eligible" 
+// console.log(result1); 
+
+
+//unary operator:
+//  let value=10;
+// console.log(value);
+// // console.log(value+1);//11
+// console.log(++value);//11
+    //   1.increment unary operator(++)
+        //  2.decrement unary operator(--)
+
+// ++value;//pre-increment//11
+// value++;//post-increment //12
+// console.log(value);//12       
+        
+
+    let x=10;
+    let y=5;
+
+    // let result= ++x  +  y++  -  ++y
+    let result=x++ + --x + ++y - y-- + ++x;
+    console.log(x);//11
+    console.log(y);//5
+    console.log(result);//31
+
+
+    </script>
+</body>
+</html>

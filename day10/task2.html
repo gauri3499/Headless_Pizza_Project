@@ -17,7 +17,30 @@
             }
             
         }
+        @media screen and (max-width:500px)
+        {
+            .box{
+                border-radius: 50%;
+                background:linear-gradient(to right,red,green);
+            }
+        }
+        @media screen and (orientation:portrait) {
+            .box{
+                height: 200px;
+                width: 200px;
+                background:linear-gradient(to left blue ,yellow)
+            }
+        }    
+        @media screen and (orientation: portrait){
+            .box{
+                    background: url(./images\ \(1\).jpg);
+            }
+                
+        }
+            
         
+        /*orientation : portrait (width<height)
+                       landspace (width>height)  */
     </style>
 </head>
 <body>

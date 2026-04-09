@@ -8,7 +8,6 @@ body{
     border: 1px solid black;
 
 }
-
 .grid-container{
     height: 90%;
     display: grid;
@@ -58,6 +57,7 @@ nav{
     
     display: flex;
     justify-content:flex-end;
+    align-items: center;
 }
 a{
     color:gray;
@@ -70,10 +70,12 @@ a:hover{
     text-decoration: underline;
 }
 
-@media screen and(max-width:1024px)and (min-width:760px){
-nav{
-        background-color: red;
-        justify-content: space-between;
+@media screen and(max-width:1024px)and (min-width:760px)
+{
+    nav{
+    background-color: red;
+        
+    }
 }
 
 .grid-container{
@@ -85,6 +87,6 @@ nav{
                          
 }
     
-}
+
 
 
