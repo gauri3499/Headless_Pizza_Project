@@ -248,5 +248,71 @@ for (declare and intialize;condition;updation){
 
 }
 
+functions: 
+       - it is a block of code{}
+       - creating a function once and calling function many times
+       - avoid code repetition
+       - improve readability
+       - easy to maintain and debug
+
+       types:
+           Based on arguments/parameters:
+                               1.Argumented/parameterized function
+                                   function functionname(arg1,arg2.....){
 
 
+                                   }
+                                   - to print dynamic output based on inputs
+                               2.non-Argumented/non-parameterized function
+                                     function functionname(){
+
+                                     }
+                                     - to execte the same code everytime
+
+
+
+       1.function declaration:
+           syntax:
+           function functionname(){
+                 //code
+           }
+
+           functionName()//caller
+           Note : without calling a functionName it won't execute the code
+                   hosting is possible
+      2.function Expression:
+           syntax:
+           let variable/functionReference=function(){
+                        //code
+           }
+           functionReference();//caller
+
+      3.Arrow Function : 
+           syntax :
+           let ref=()=>{
+
+           }
+           ref();//caller
+
+      4.Anonymous Function :
+             a function without name,arrow function and function Expression will acts like
+             Anonymous function
+
+             syntax: 
+             setTimeout(()>={
+                  
+             },timeout in sec);     
+      5.callback function:
+            a function is passing through argunment in another function
+
+            syntax:
+            function f1(){
+
+            }
+            function f2(){
+
+            }
+            function mainFunction(var1,var2,fun1,fun2){
+
+            }
+            mainfunction(10,20,f1,f2);

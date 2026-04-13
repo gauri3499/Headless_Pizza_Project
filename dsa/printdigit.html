@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Digit</title>
+</head>
+<body>
+    <script>
+        let printdigit=function(num){
+            while(num>0){
+                let rem=num%10;
+                console.log(rem);
+                // 
+                num=Math.floor(num/10);//round number to nearest smallest number
+                
+
+            }
+
+        }
+        printdigit(153);
+
+        
+    </script>
+</body>
+</html>

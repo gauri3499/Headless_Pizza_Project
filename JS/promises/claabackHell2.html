@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function step1(callback){
+            setTimeout(() => {
+                console.log ("glass of water");
+                callback();
+            },5000);
+        }
+        function step2(callback){
+            setTimeout(() =>{
+                console.log("squeeze lemon into water");
+                callback();
+            },3000);
+            
+            
+        }
+        function step3(callback){
+            setTimeout(() =>{
+                console.log("adding sugar ,salt,etc.")
+                callback();
+
+            },2000)
+            
+        }
+        function step4(callback){
+            setTimeout(() =>{
+                console.log("stir and drink the lemon soda or juice...")
+                callback();
+            },6000)
+        }
+
+        // calling a function through caller
+        step1(()=>{
+            step2(() =>{
+                step3(() =>{
+                    step4()
+
+                })
+            })
+        });
+        
+    </script>
+
+</body>
+</html>
