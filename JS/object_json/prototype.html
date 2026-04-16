@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype </title>
+</head>
+<body>
+    <script>
+        // let animal={
+        //     color:'red'//key-value pair or name-value pair
+        // }
+        // console.log(animal);
+        // console.log(animal.color);//red
+        // console.log(animal.Color);//undefined
+        // console.log(animal.name);//undefined
+
+        // animal.color='brown';
+        // console.log(animal.color);//brown
+        // animal.name='cow';
+        // console.log(animal.name);//cow
+
+        function Student(fristname,Lastname,yearofBirth){
+            // Data/properties/variable
+            this.fristname=fristname;
+            this.Lastname=Lastname;
+            this.yearofBirth=yearofBirth
+
+            this.age=()=>{
+                return new Date().getFullYear()-this.yearofBirth;
+            }
+        }    
+            let s1=new Student('Gauri','shinde','2004')
+            console.log(s1);
+            console.log(s1.fristname);
+            console.log(s1.Lastname);
+            console.log(s1.age());
+
+            Student.prototype.fullName=function(){
+                // return this.fristname+""+this.Lastname 
+                return `${this.fristname} ${this.Lastname}`; 
+            }
+            
+
+            Student.prototype.email='gauri45@gmail.com';
+            console.log(s1.email);
+            console.log(s1.fullName());
+        
+    </script>
+</body>
+</html>

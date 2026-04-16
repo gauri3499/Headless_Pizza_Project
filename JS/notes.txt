@@ -4,6 +4,7 @@ javascript :
         - it is used as client(UI) and server side(Node Js) language
         - it is a synchrnous language(it excute the code line by line)
         - it is case sensitive
+        -ES(Six)
 
 
 javascript is used in :
@@ -316,3 +317,244 @@ functions:
 
             }
             mainfunction(10,20,f1,f2);
+
+  call back hell/pyramid of doom:
+          this is a situation where we have multiple call backs inside a callback(nested functions)
+          - hard to maintain /modify
+          - hard to read
+          - hard to debug
+
+          use:when are dealing with time in synchrnous code then it behaves like asynchronomous so we won't template
+              get expected output,to avoid this senario we can use call back hell and promises
+
+promises:
+      - it is an object ,used to handle asynchronomous operations
+
+      States:
+             1.pending ---starting /initial state 
+             2.fulfilled -- if operation is sucess
+             3.rejected -- if operation if failed
+
+promises can be handle in two ways:
+
+             1.then and catch 
+                   then() -- a function,which is used to handler success of a promises
+                   catch()-- a function ,which is used to deal with failure of a promises
+                   finally() --a function , which executes even if we get success or failure
+
+             2.async and await     
+                 async is a function which hold a promises
+                 await is a keyword used to wait for a promise to resolve
+                 await is used inside async function(mandatory)                      
+
+Object :
+            - real world entity,which is a combination of proprties and functions
+            - data is stored in the form of key and value pair
+            - object is enclosed in {}
+                       syntax:
+                       {
+                        "key1":value1,
+                        "key2":value2
+                       }
+Note: in Js every object consist of prototype
+
+Creatation of objects:
+                 1.Constructor function
+                 2.class and constructor
+                 3.object literal
+                 4.object.create()
+
+Creatation 
+6.Constructor Function : 
+----
+                  useds to create object
+                  - object - real world entity
+                           - data is stored in the form of key and value pair 
+                           - object is enclosed in {}
+                           syntax:
+                           {
+                              "key1":values1,
+                              "key2":value2
+                           }
+                 syntax :
+                 function FunctionName(arg1,arg2,arg3...){
+                  this.arg1=arg1;
+                  this.arg2=arg2;
+                 }          
+                 new Functionname(val1,val2,val3...)//caller
+                 note : indicates the current object
+
+2.class and constructor :
+               -it is a template for creating objects
+
+               syntax:
+               class ClassName{
+                  Constructor(ar1,arg2){
+                        this.arg1=arg2;
+                        this.arg2=arg2;
+                  }
+               }
+3.Object literal :(static way)
+      syntax:
+      let varname={
+            k1=v1,
+            k2=v2,
+      }   
+4.Object.create():
+    const obj={
+      'key1'='val1'
+    }  
+    let newObj=object.create(obj) ;
+
+    -it is a way of creating a new object based on exisiting object (inheriatances)
+    - thus,it can share the proprties and function of an exisiting object--- prototype
+
+prototype:
+----------
+            - it is a property of an object
+            - it allows other object to inherit/saharing proprties and functiond
+            - it help to add new proprties and function into object
+            - it helps to creates a prototype chain between objects
+
+prototype chaining:
+------------------
+            - it is a chain of objects 
+            - it can achieve using Object.create()
+
+
+promises.race():
+===============
+      - it collects multiple promises in array format
+      - it return single result
+      - frist win , frist value
+      - it won't wait for all promises to complte
+
+Promises.all():
+=============  
+           - it collect multiple promises in array format
+           - it result promises in array format , when all promises are in resolve state
+           - if any promises is failed it execte catch block as errors
+
+Promises.allSettled():
+=====================
+                 - it coolect multiple promise in array format
+                 - it result promise in array format , in the form of object which consist state and value 
+
+                 
+Object method:
+
+ object.keys()---returns keys in array format
+ object.values()---returns values inarray format
+ object.entries()--returns key-values pair in array format
+
+Iterating the object key-values:
+---------------------------------
+        - for in loop
+           syntax:
+           for(let key in obj){
+            //logic
+           }
+        - forEach function
+          obj.forEach(
+            (key)=>{
+                  //logic
+            }
+          )   
+7.IIFE (immediately invoked function Expression)
+=======
+
+    - calling a function immediately after creating/declaring
+    syntax:
+    (
+      function(){
+
+      }
+    )();
+
+8.Generator Function:
+=====================
+      - a function is used  to generator values or crates iterators/generator
+
+      syntax:
+      function* functionname(){
+            yield value1;
+            .......
+            yield valueN;
+      }
+      - to access values from generators
+      let generator=functionName();
+      generator.next()--->returns data and value in object format
+
+9.Higher order Function:
+========================
+               - it is a function,that allow another function as arguments
+                 and returns another function as return Statements
+
+                 syntax:
+                 function mainFunc(arg1,arg2,fun){
+                    return fun(arg1,arg2);
+                 }      
+JSON :(javascript object notation)
+======
+      - it is a plain text, lightweight data interchange text
+      - used to store data(noSQL) and exchange data(client<--->server)
+
+                  JS Object                          JSON Object 
+  --------------------------------------------------------------------------------------------------------
+  syntax     flexible and dynamic                  fixed and static
+
+  keyQoutes       optional                        mandatory
+
+  JSON RULES:
+  -----------
+           - key must be indicated with double Qoutes
+           - keys must be unique
+           - Json object need to enclosed in {}
+           - Json array need to enclosed in []
+
+Json Types:
+-----------
+          1.json object
+          2.json array
+          3.Nested json
+
+accessing the values :
+      - can access by using .notation or [] notation
+
+re-assign/re-intialize the values:
+     obj.key=newValue or obj['key]=newValue
+
+delete a value:
+      delete obj.key or delete obj['key]
+
+merge of objects:
+
+     - merging/combining the ....(spread operator) or object.assign()
+
+     Note : while merging keys must be unique ,if same key is present in both the objects
+           it prefers second object data
+
+adding the key-value pair:
+         use .notation or [] notation or ...(spread operator) or object.assign
+
+Destructing the object:
+-------------------------
+        - it is a super way for accessing ,adding or assigning value renaming keys
+        - it makes code cleaner,resuable,simple
+      syntax:
+
+       const user={
+            "name":"raj",
+            "email":"gauri34@gmail.com"
+       }  
+       console.log(user.name);
+
+       let {name,email}=user;
+       console.log(name);                   
+
+---------------------------------------------------------
+Array : 
+-------
+
+
+

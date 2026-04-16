@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises 1</title>
+</head>
+<body>
+    <script>
+    // Promise is an object which stores data in k-v pair
+        //  let p1= new Promise((resolve,reject)=>{
+        //     setTimeout(() => {
+        //         return "this is a promise"
+        //         resolve("this is a resolve code")
+        //  });
+
+        //  console.log(p1);
+
+         function step1(){
+            return new Promise((resolve)=>{
+                setTimeout(() => {
+                console.log ("glass of water");
+                
+                },5000);
+            })
+            
+        }
+        function step2(){
+            return new Promise((resolve)=>{
+                setTimeout(() =>{
+                console.log("squeeze lemon into water");
+                
+            },3000);
+            
+            })
+            
+        }
+        function step3(){
+            return new Promise((resolve)=>{
+                setTimeout(() =>{
+                console.log("adding sugar ,salt,etc.")
+                
+
+            },2000)
+            })
+            
+        }
+        function step4(){
+            return new Promise((resolve)=>{
+                setTimeout(() =>{
+                console.log("stir and drink the lemon soda or juice...")
+                
+            },6000)
+            })
+        }
+
+        // handling promises then and catch
+    //     step1()
+    //     .then(()=>step2())
+    //     .then(()=>step3())
+    //     .then(()=>step4())
+    //     .catch(
+    //     (error)=>{
+    //         console.log(error);
+    //     }
+    // )
+
+    //handling promises using async and await
+    async function preparelemonjuice(){
+        try{
+            await step1();
+            await step2();
+            await step3();
+            await step4();
+        }
+    }    
+    </script>
+</body>
+</html>
